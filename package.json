@@ -1,0 +1,19 @@
+{
+  "name": "odyssey-restaurant-ops",
+  "private": true,
+  "packageManager": "pnpm@9.12.0",
+  "scripts": {
+    "dev:backend": "pnpm --filter backend dev",
+    "dev:dashboard": "pnpm --filter dashboard start",
+    "gen:contract": "pnpm --filter backend gen:spec && pnpm --filter api-client gen",
+    "db:push": "pnpm --filter backend db:push",
+    "db:seed": "pnpm --filter backend db:seed",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0",
+    "typescript": "^5.5.0"
+  }
+}
